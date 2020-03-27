@@ -6,7 +6,10 @@ body {
     background: linear-gradient(89deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
-  {/* Background color inspired from Instagram */}
+}
+
+button {
+  cursor: pointer;
 }
 
 code {

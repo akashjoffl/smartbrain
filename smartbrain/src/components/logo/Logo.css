@@ -1,4 +1,8 @@
 .Tilt {
+    background: linear-gradient(89deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+/* 
     background: linear-gradient(89deg, #FF5EDF 0%, #04C8DE 100%);
-    /* w3c */
-}   
+    w3c */
+}
