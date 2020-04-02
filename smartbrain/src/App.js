@@ -44,6 +44,7 @@ class App extends Component {
       topRow: claifaiFace.top_row * height,
       rightCol: width - (claifaiFace.right_col * width),
       bottomRow: height - (claifaiFace.bottom_row * height)
+      // the maths is fucked here to figure out
     }
   }
 
