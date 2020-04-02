@@ -79,7 +79,7 @@ class App extends Component {
         onInputChange={this.onInputChange} 
         onButtonSumbit={this.onButtonSumbit}
         />
-      <FaceRecognition imageUrl={this.state.imageUrl} />
+      <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} />
     </div>
     );
   }
