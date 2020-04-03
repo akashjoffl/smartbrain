@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
 import Navigation from './components/navigation/navigation';
+import Signin from './components/Signin/Signin';
 import Logo from './components/logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
@@ -31,6 +32,7 @@ class App extends Component {
       input: '',
       imageUrl: '',
       box: {},
+      route: 'signin'
     }
   }
 
@@ -74,14 +76,19 @@ class App extends Component {
         params={particlesOption}
       />
       <Navigation />
-      <Logo />
-      <Rank />
-      <ImageLinkForm 
-        onInputChange={this.onInputChange} 
-        onButtonSumbit={this.onButtonSumbit}
-        />
-      <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} />
-    </div>
+      { this.state.route === 'signin'
+        ? <Signin />
+        : <div>
+            <Logo />
+            <Rank />
+            <ImageLinkForm 
+              onInputChange={this.onInputChange} 
+              onButtonSumbit={this.onButtonSumbit}
+            />
+            <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} />
+          </div>
+          }
+      </div>
     );
   }
 }
